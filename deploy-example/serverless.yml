@@ -1,0 +1,19 @@
+service: deploy-example
+frameworkVersion: '3'
+
+plugins:
+ - serverless-offline
+
+provider:
+  name: aws
+  runtime: nodejs14.x
+  region: 'us-west-2'
+  versionFunctions: false
+
+functions:
+  hello:
+    handler: handler.hello
+    events:
+      - http:
+          path: /
+          method: get
