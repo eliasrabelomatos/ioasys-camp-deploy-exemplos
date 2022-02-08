@@ -1,0 +1,15 @@
+config:
+  target: "localhost:3000"
+  http: 
+    timeout: 10 
+
+  phases:
+    - duration: 6000 
+      arrivalRate: 100 
+      name: "100 user arrival"
+
+scenarios:
+  - name: 'Get Casimires'
+    flow:
+      - get:
+          url: "/api/v1/casimires"
