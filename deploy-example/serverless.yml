@@ -7,7 +7,7 @@ plugins:
 provider:
   name: aws
   runtime: nodejs14.x
-  region: 'us-west-2'
+  region: 'us-east-2'
   versionFunctions: false
 
 functions:
@@ -16,4 +16,10 @@ functions:
     events:
       - http:
           path: /
+          method: get
+  hello2:
+    handler: handler.hello
+    events:
+      - http:
+          path: /batatas
           method: get

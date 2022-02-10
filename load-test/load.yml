@@ -1,5 +1,5 @@
 config:
-  target: "localhost:3000"
+  target: "http://clust-publi-zor5sgd5vbl3-824751573.us-east-2.elb.amazonaws.com"
   http: 
     timeout: 10 
 
